@@ -1,2 +1,2 @@
-# Purwadhika
+# Purwadhika - Fundamental
 April - Oktober
