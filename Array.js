@@ -108,3 +108,37 @@ console.log(j[2][0][0])
 console.log(j[2][2])
 // how to get item 10
 console.log(j[2][0][2][1]) //didalam array ada array, klo mau mencari di hitung satu2 di dalamnya
+
+// LOOP WITH ARRAY
+let categories = ["Horror", "Sci-Fi", "Thriller", "Adventure", "Animation", "Romance"]
+let info = `Terdapat ${categories.length} kategori film :\n`
+
+for (let i = 0; i < categories.length; i++) {
+    info += categories[i] + '\n'
+}
+
+console.log(info)
+
+// CONTOH LEBIH KOMPLEKS
+let film = [["Horror", "The Nun", 126], ["Romance", "Dilan", 150], ["Sci-Fi", "Interstellar", 120]]
+let infoFilm = `List film hari ini :\n`
+
+for (let i = 0; i < film.length; i++) { // 0 1
+    let temp = `${i + 1}. `
+    for (let j = 0; j < film[i].length; j++) { // 0 1 2 3
+        if (j == film[i].length - 1) {
+            temp += `${film[i][j]} minutes \n`
+        } else {
+            temp += `${film[i][j]}, `
+        }
+    }
+    // console.log(temp)
+    infoFilm += temp 
+}
+
+console.log(infoFilm)
+// result:
+// List film hari ini:
+// 1. Horror, The Nun, 126 minutes
+// 2. Romance, Dilan, 150 minutes
+// 3. Sci-File, Interstellar, 120 minutes
